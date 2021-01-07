@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TouchTrackingEffectDemos"
              xmlns:esriUI="clr-namespace:Esri.ArcGISRuntime.Xamarin.Forms;assembly=Esri.ArcGISRuntime.Xamarin.Forms"
-             xmlns:tt="clr-namespace:TouchTracking"
+             xmlns:tt="clr-namespace:TouchTracking" xmlns:controls="clr-namespace:TouchTrackingEffectDemos.Controls"
              x:Class="TouchTrackingEffectDemos.HomePage"
              Title="Touch Tracking Effect">
 
@@ -14,12 +14,12 @@
         </Grid.RowDefinitions>
 
         <!-- MapView-->
-        <Grid>
+        <controls:MapViewGrid>
             <esriUI:MapView x:Name="MyMapView"/>
             <Grid.Effects>
                 <tt:TouchEffect Capture="True" TouchAction="TouchEffect_MapView" />
             </Grid.Effects>
-        </Grid>
+        </controls:MapViewGrid>
 
         <!-- BoxView-->
         <Grid Grid.Row="1">
